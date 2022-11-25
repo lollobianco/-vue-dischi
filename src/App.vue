@@ -2,7 +2,15 @@
   <div id="app">
 
     <HeaderComp/>
-    <AlbumComp/>
+
+    <div class="container">
+      <div class="row">
+        <AlbumComp v-for="(element, ind) in albumsArray" :key="ind" :albums="element"/> 
+      </div>
+    </div>
+
+    
+    
 
   </div>
 </template>
@@ -21,7 +29,7 @@ export default {
   },
   data() {
       return {
-        albums: ''
+        albumsArray: ''
       }
     },
     mounted() {
@@ -35,7 +43,8 @@ export default {
 
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
           .then((response) => {
-            this.albums = response.data
+            this.albumsArray = response.data.response
+            console.log(this.albumsArray)
           })
 
       }

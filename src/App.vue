@@ -3,8 +3,8 @@
 
     <HeaderComp/>
 
-    <div class="container">
-      <div class="row">
+    <div class="card-container">
+      <div class="d-flex flex-wrap justify-content-center justify-content-between">
         <AlbumComp v-for="(element, ind) in albumsArray" :key="ind" :albums="element"/> 
       </div>
     </div>
@@ -53,8 +53,25 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  height: 100vh;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: #1E2D3B;
+}
+
+#app {
+  
+}
+
+.card-container{
+  width: 70%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.row{
+  width: 100%;
+  margin: 0 auto;
 }
 </style>

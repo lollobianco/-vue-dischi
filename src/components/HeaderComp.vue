@@ -1,7 +1,7 @@
 <template>
   <div id="header-component">
 
-    
+
     
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 <style scoped lang="scss">
 
 #header-component{
-  height: 10%;
+  height: 60px;
   background-color: #2D3A46;
 }
 

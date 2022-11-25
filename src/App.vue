@@ -60,10 +60,6 @@ export default {
   background-color: #1E2D3B;
 }
 
-#app {
-  
-}
-
 .card-container{
   width: 70%;
   margin: 0 auto;

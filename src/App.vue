@@ -2,6 +2,7 @@
   <div id="app">
 
     <HeaderComp/>
+    <AlbumComp/>
 
   </div>
 </template>
@@ -9,11 +10,14 @@
 <script>
 import axios from 'axios'
 import HeaderComp from './components/HeaderComp.vue'
+import AlbumComp from './components/AlbumComp.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HeaderComp
+    HeaderComp,
+    AlbumComp
   },
   data() {
       return {
@@ -33,7 +37,7 @@ export default {
           .then((response) => {
             this.albums = response.data
           })
-          
+
       }
     }
 }

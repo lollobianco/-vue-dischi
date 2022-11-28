@@ -5,22 +5,19 @@
       <img src="../assets/logo-small.svg" alt="">
     </div>
 
-    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-      <option selected>Filter by musical genres</option>
-      <option value="1">All</option>
-      <option value="2">Rock</option>
-      <option value="3">Pop</option>
-      <option value="4">Jazz</option>
-      <option value="5">Metal</option>
-    </select>
-    
+    <HeaderSelect/>
     
   </div>
 </template>
 
 <script>
+import HeaderSelect from './HeaderSelect.vue'
+
 export default {
   name: 'HeaderComp',
+  components:{
+    HeaderSelect
+  },
   props: {
     
   }
@@ -50,11 +47,6 @@ export default {
     width: 80%;
   }
 
-}
-
-.form-select{
-  width: 20%;
-  margin-left: 20px;
 }
 
 </style>

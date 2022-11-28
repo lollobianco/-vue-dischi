@@ -14,6 +14,7 @@
          albums: Object
       }
    }
+   
 </script>
 
 <style lang="scss" scoped>

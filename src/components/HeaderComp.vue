@@ -5,7 +5,7 @@
       <img src="../assets/logo-small.svg" alt="">
     </div>
 
-    <HeaderSelect/>
+    <HeaderSelect @select="filterGenre"/>
     
   </div>
 </template>
@@ -15,11 +15,34 @@ import HeaderSelect from './HeaderSelect.vue'
 
 export default {
   name: 'HeaderComp',
+  props: {
+    albums: Object
+  },
   components:{
     HeaderSelect
   },
-  props: {
+  data(){
+
+    return{
+      genreName: '',
+      genreArray: ''
+    }
     
+  },
+  methods:{
+
+    filterGenre(genreText){
+
+      this.genreName = genreText
+      console.log(this.albums);
+
+      // this.albums.forEach((element, index) => {
+
+      //     console.log(this.albums[index].genre);
+
+      // });
+
+    }
   }
 }
 </script>
